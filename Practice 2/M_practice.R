@@ -1,0 +1,29 @@
+SH = c(10,12,14,6,4,9,15)
+SM = c(70,54,67,85,34,45,75)
+SH_matrix = matrix(SH)
+SH_matrix
+SM_matrix = matrix(SM)
+SM_matrix
+SD = c(SH,SM)
+SD
+SD_matrix = matrix(SD)
+SD_matrix
+Y = matrix(SD_matrix, byrow = FALSE, nrow=7)
+Y
+colnames(Y)= c("hours","marks")
+Y
+rownames(Y)= c(1:7)
+Y
+Y[5,2]
+summary(Y)
+M = c("A","J","B","C","D")
+N = c(20,10,14,23,13)
+O = c(46,65,34,56,76)
+Male = c(FALSE,TRUE,TRUE,FALSE,TRUE)
+x = data.frame(M,N,O,Male)
+x
+summary(x)
+x$M
+x$N
+mean(x$N)
+summary(x$O)
