@@ -39,3 +39,5 @@ myplot = ggplot(dataset, aes(x=weight,fill=sex))+
   myplot+scale_color_brewer(palette="Dark2")+
     scale_fill_brewer(palette ="Dark2")
 #Using a grey scale
+myplot+scale_color_grey()+scale_fill_grey()+
+  theme_classic()
