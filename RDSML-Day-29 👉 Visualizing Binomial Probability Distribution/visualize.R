@@ -1,0 +1,10 @@
+dbinom(x=4, size =10, prob =0.5)
+n = c(0:10)
+n
+p = dbinom(x = n, size = 10, prob = 0.5)
+barplot(p)
+library(visualize)
+visualize.binom(stat = 3,size =10,prob=0.5, section ="lower")
+visualize.binom(stat = 3,size =10,prob=0.5, section ="upper")
+visualize.binom(stat = c(3,6),size =10,prob=0.5, section ="bounded")
+grid(nx = NULL, ny = NULL, col = "grey", lty = "dotted")
