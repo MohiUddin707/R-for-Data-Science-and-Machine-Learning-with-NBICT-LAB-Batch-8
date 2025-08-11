@@ -1,4 +1,4 @@
-dbinom(x=4, size =10, prob =0.5)
+dbinom(x=7, size =10, prob =0.5)
 n = c(0:10)
 n
 p = dbinom(x = n, size = 10, prob = 0.5)
