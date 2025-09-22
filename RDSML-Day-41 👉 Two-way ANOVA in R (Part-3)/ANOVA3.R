@@ -57,7 +57,16 @@ install.packages("multcompView")
 library(multcompView)
 group_letters <- cld(emmeans(m, ~ fert * irr), Letters = letters)
 print(group_letters)
-
+# Publication-ready ANOVA table
+library(broom)
+library(kableExtra)
+library(car)
+aov_tab <- Anova(m, type = 3) %>%
+  tidy() %>%
+  mutate(p.value = signif(p.value, 3))
+print(aov_tab)
+kbl(aov_tab, digits = 3, caption = "Two-way ANOVA") %>%
+  kable_classic(full_width = FALSE, html_font = "Times New Roman")
 
 
 
