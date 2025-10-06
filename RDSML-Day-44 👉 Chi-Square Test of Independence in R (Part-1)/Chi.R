@@ -25,6 +25,19 @@ mosaicplot(dt, shade = T,las=2, main ="Housetasks")
 # that the observed value is lower than the expected value
 
 
+#computing Chi Sqaure test in R
+chisq = chisq.test(housetasks)
+chisq
+
+chisq$observed
+
+chisq$expected
+round(chisq$expected,2)
+
+
+
+
+
 
 
 
